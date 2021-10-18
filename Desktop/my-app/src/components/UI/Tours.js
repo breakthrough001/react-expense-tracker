@@ -28,24 +28,22 @@ const Tours = () => {
   ]);
 
   return (
-    <>
-      {tours.map((tour) => {
-        return (
-          <div className='container'>
-            <div className='row'>
-              <Card className='col-3'>
-                <CardBody>
-                  <CardImg src={tour.image} />
-                  <CardTitle>{tour.planet}</CardTitle>
-                  <CardText>{tour.excursion}</CardText>
-                  <CardText>{tour.price}</CardText>
-                </CardBody>
-              </Card>
-            </div>
-          </div>
-        );
-      })}
-    </>
+    <div className='container'>
+      <div className='row'>
+        {tours.map((tour) => {
+          return (
+            <Card className='col-4'>
+              <CardBody>
+                <CardImg src={tour.image} />
+                <CardTitle>{tour.planet}</CardTitle>
+                <CardText>{tour.excursion}</CardText>
+                <CardText>{tour.price}</CardText>
+              </CardBody>
+            </Card>
+          );
+        })}
+      </div>
+    </div>
   );
 };
 

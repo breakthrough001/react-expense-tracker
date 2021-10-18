@@ -7,21 +7,17 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
 } from "reactstrap";
 
-const Example = (props) => {
+const NavLinks = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
   return (
     <div>
-      <Navbar color='light' light expand='md'>
-        <NavbarBrand href='/'>reactstrap</NavbarBrand>
+      <Navbar expand='md'>
+        <NavbarBrand href='/'>rokket</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className='mr-auto' navbar>
@@ -50,4 +46,4 @@ const Example = (props) => {
   );
 };
 
-export default Example;
+export default NavLinks;
